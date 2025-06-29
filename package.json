@@ -2,6 +2,11 @@
   "name": "shark-chat",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "pnpm@8.2.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
     "start": "dotenv -- turbo start",
     "dev": "dotenv -- turbo dev",
@@ -11,7 +16,6 @@
     "db:generate": "dotenv -- drizzle-kit generate --config ./packages/db/drizzle.config.ts",
     "prettier": "prettier . -w -l"
   },
-  "packageManager": "pnpm@8.2.0",
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.14",
     "autoprefixer": "^10.4.20",
